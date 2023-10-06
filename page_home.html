@@ -10,21 +10,16 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            /*background-image: url('bgimage.jpg'); /* Replace 'your-background-image.jpg' with the URL of your background image */
-            background: #E6E9EE;
-            background-size: 200px 100px;
-            background-repeat: repeat;
-            background-attachment: fixed;
+            background: #E6E9EE url('bgimage.jpg') repeat fixed;
         }
 
         /* Header Styles */
-        header {
+        .header {
             background-color: #3498DB;
             color: white;
-            font-size: .75rem;
+            font-size: 0.75rem;
             text-align: center;
-            padding-top: 5px;
-            height: 20px;
+            padding: 5px 0;
         }
 
         /* Image Slider Styles */
@@ -82,29 +77,27 @@
         /* Content Div Blocks Styles */
         .content {
             display: flex;
-            justify-content: space-between;
+            flex-direction: column; /* Arrange header and slider vertically */
             padding: 5px;
         }
 
-        .content .block {
-            width: 30%;
+        .block {
+            width: 100%; /* Make blocks take the full width */
             background-color: #f0f0f0;
             padding: 5px;
             border-radius: 2.5px;
             margin: 5px;
             border: 1px solid #3498DB;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-            width: 500px;
-            height: 200px;
         }
-        
+
         h2 {
             color: #205F89;
-            font-size: 20px; /* Font size */
-            font-weight: bold; /* Font weight */
-            text-align: left; /* Text alignment */
-            margin-bottom: 20px; /* Bottom margin */
-          }
+            font-size: 20px;
+            font-weight: bold;
+            text-align: left;
+            margin-bottom: 20px;
+        }
 
         /* Single Div Block Styles */
         #single-block {
@@ -112,32 +105,36 @@
             text-align: center;
             padding: 5px;
             border-radius: 2.5px;
-            margin-top: 0px;
-            margin-left: 10px;
-            margin-right: 10px;
+            margin: 5px 10px; /* Adjust margins as needed */
             border: 1px solid #3498DB;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-            height: 175px;
-        }
         }
     </style>
 </head>
 <body>
-   
+    <div class="header">
+        <marquee behavior="scroll" direction="left">Welcome to Texport syndicate (I) Ltd. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Digitalization project is in progress.</marquee>
+    </div>
+
     <div class="content">
- <div class="block"> 
-      <h2>Information</h2>
-            <p>Digitalisation  project is in progress...</p>
- </div>
+        <div id="image-slider">
+            <img src="./images/h_image1.png" alt="Image 1">
+            <img src="./images/h_image2.png" alt="Image 2">
+            <img src="./images/h_image3.png" alt="Image 3">
+            <div class="slider-buttons">
+                <button class="slider-button left" onclick="prevSlide()">&#10094;</button>
+                <button class="slider-button right" onclick="nextSlide()">&#10095;</button>
+            </div>
+        </div>
+
         <div class="block">
             <h2>Information</h2>
-            <p>Digitalisation  project is in progress...</p>
+            <p>Digitalization project is in progress...</p>
         </div>
 
         <div class="block">
             <h2>Thought for the day</h2>
             <p>“Small daily improvements over time lead to stunning results”</p>
-            
         </div>
 
         <div class="block">
@@ -147,7 +144,7 @@
     </div>
 
     <div id="single-block">
-       <h3>Notification </h3>
+        <h3>Notification</h3>
         <p>Update soon...</p>
     </div>
 
