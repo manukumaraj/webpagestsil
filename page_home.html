@@ -81,14 +81,20 @@
             padding: 5px;
         }
 
+        .blocks-container {
+            display: flex;
+            justify-content: space-between;
+            
+        }
+
         .block {
-            width: 100%; /* Make blocks take the full width */
+            width: calc(33.33% - 10px); /* 33.33% width for each block with a small margin between them */
             background-color: #f0f0f0;
             padding: 5px;
             border-radius: 2.5px;
             margin: 5px;
             border: 1px solid #3498DB;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            
         }
 
         h2 {
@@ -112,13 +118,15 @@
     </style>
 </head>
 <body>
+    
+
+    <div class="content">
     <div class="header">
         <marquee behavior="scroll" direction="left">Welcome to Texport syndicate (I) Ltd. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Digitalization project is in progress.</marquee>
     </div>
-
-    <div class="content">
+        
         <div id="image-slider">
-            <img src="./images/h_image1.png" alt="Image 1">
+          <img src="./images/h_image1.png" alt="Image 1">
             <img src="./images/h_image2.png" alt="Image 2">
             <img src="./images/h_image3.png" alt="Image 3">
             <div class="slider-buttons">
@@ -127,19 +135,21 @@
             </div>
         </div>
 
-        <div class="block">
-            <h2>Information</h2>
-            <p>Digitalization project is in progress...</p>
-        </div>
+        <div class="blocks-container">
+            <div class="block">
+                <h2>Information</h2>
+                <p>Digitalization project is in progress...</p>
+            </div>
 
-        <div class="block">
-            <h2>Thought for the day</h2>
-            <p>“Small daily improvements over time lead to stunning results”</p>
-        </div>
+            <div class="block">
+                <h2>Thought for the day</h2>
+                <p>“Small daily improvements over time lead to stunning results”</p>
+            </div>
 
-        <div class="block">
-            <h2>Birthday wishes</h2>
-            <p>Update soon...</p>
+            <div class="block">
+                <h2>Birthday wishes</h2>
+                <p>Update soon...</p>
+            </div>
         </div>
     </div>
 
