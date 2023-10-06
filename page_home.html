@@ -4,117 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TSIL Home</title>
-    <style>
-        /* Global Styles */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #E6E9EE url('bgimage.jpg') repeat fixed;
-        }
-
-        /* Header Styles */
-        .header {
-            background-color: #3498DB;
-            color: white;
-            font-size: 0.75rem;
-            text-align: center;
-            padding: 5px 0;
-        }
-
-        /* Image Slider Styles */
-        #image-slider {
-            width: 100%;
-            height: 300px;
-            position: relative;
-        }
-
-        #image-slider img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            position: absolute;
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-        }
-
-        /* Arrow Button Styles */
-        .slider-buttons {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-        }
-
-        .slider-button {
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            border: none;
-            padding: 10px;
-            font-size: 20px;
-            cursor: pointer;
-            transition: background-color 0.3s ease-in-out;
-        }
-
-        .slider-button:hover {
-            background-color: rgba(0, 0, 0, 0.7);
-        }
-
-        .slider-button:focus {
-            outline: none;
-        }
-
-        .slider-button.left {
-            margin-left: 10px;
-        }
-
-        .slider-button.right {
-            margin-right: 10px;
-        }
-
-        /* Content Div Blocks Styles */
-        .content {
-            display: flex;
-            flex-direction: column; /* Arrange header and slider vertically */
-            padding: 5px;
-        }
-
-        .blocks-container {
-            display: flex;
-            justify-content: space-between;
-            
-        }
-
-        .block {
-            width: calc(33.33% - 10px); /* 33.33% width for each block with a small margin between them */
-            background-color: #f0f0f0;
-            padding: 5px;
-            border-radius: 2.5px;
-            margin: 5px;
-            border: 1px solid #3498DB;
-        }
-
-        h2 {
-            color: #205F89;
-            font-size: 20px;
-            font-weight: bold;
-            text-align: left;
-            margin-bottom: 20px;
-        }
-
-        /* Single Div Block Styles */
-        #single-block {
-            background-color: #f0f0f0;
-            text-align: center;
-            padding: 5px;
-            border-radius: 2.5px;
-            margin: 5px 10px; /* Adjust margins as needed */
-            border: 1px solid #3498DB;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-        }
-    </style>
+  
 </head>
 <body>
     <div class="content">
@@ -132,8 +22,7 @@
                     <img src="./images/h_image2.png" alt="Image 2">
                     <img src="./images/h_image3.png" alt="Image 3">
                     <div class="slider-buttons">
-                        <button class="slider-button left" onclick="prevSlide()">&#10094;</button>
-                        <button class="slider-button right" onclick="nextSlide()">&#10095;</button>
+                        
                     </div>
                 </div>
             </div>
@@ -153,26 +42,7 @@
             </div>
         </div>
     </div>
-    <script>
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('#image-slider img');
-
-        function showSlide(n) {
-            slides[currentSlide].style.opacity = 0;
-            currentSlide = (n + slides.length) % slides.length;
-            slides[currentSlide].style.opacity = 1;
-        }
-
-        function prevSlide() {
-            showSlide(currentSlide - 1);
-        }
-
-        function nextSlide() {
-            showSlide(currentSlide + 1);
-        }
-
-        // Start with the first slide displayed
-        showSlide(currentSlide);
-    </script>
+   
 </body>
 </html>
+
