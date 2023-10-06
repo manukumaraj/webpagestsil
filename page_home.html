@@ -94,7 +94,6 @@
             border-radius: 2.5px;
             margin: 5px;
             border: 1px solid #3498DB;
-            
         }
 
         h2 {
@@ -118,46 +117,42 @@
     </style>
 </head>
 <body>
-    
-
     <div class="content">
-    <div class="header">
-        <marquee behavior="scroll" direction="left">Welcome to Texport syndicate (I) Ltd. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Digitalization project is in progress.</marquee>
-    </div>
+     
+         <div class="block">
+                <div class="header">
+                    <marquee behavior="scroll" direction="left">Welcome to Texport syndicate (I) Ltd. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Digitalization project is in progress.</marquee>
+                </div>
+            </div>
         
-        <div id="image-slider">
-          <img src="./images/h_image1aa.png" alt="Image 1">
-            <img src="./images/h_image2.png" alt="Image 2">
-            <img src="./images/h_image3.png" alt="Image 3">
-            <div class="slider-buttons">
-                <button class="slider-button left" onclick="prevSlide()">&#10094;</button>
-                <button class="slider-button right" onclick="nextSlide()">&#10095;</button>
+        
+        <div id="single-block">
+                <div id="image-slider">
+                    <img src="./images/h_image1.png" alt="Image 1">
+                    <img src="./images/h_image2.png" alt="Image 2">
+                    <img src="./images/h_image3.png" alt="Image 3">
+                    <div class="slider-buttons">
+                        <button class="slider-button left" onclick="prevSlide()">&#10094;</button>
+                        <button class="slider-button right" onclick="nextSlide()">&#10095;</button>
+                    </div>
+                </div>
             </div>
-        </div>
-
+        
+        
+        
         <div class="blocks-container">
-            <div class="block">
-                <h2>Information</h2>
-                <p>Digitalization project is in progress...</p>
-            </div>
-
+           
+           
             <div class="block">
                 <h2>Thought for the day</h2>
                 <p>“Small daily improvements over time lead to stunning results”</p>
             </div>
-
             <div class="block">
                 <h2>Birthday wishes</h2>
                 <p>Update soon...</p>
             </div>
         </div>
     </div>
-
-    <div id="single-block">
-        <h3>Notification</h3>
-        <p>Update soon...</p>
-    </div>
-
     <script>
         let currentSlide = 0;
         const slides = document.querySelectorAll('#image-slider img');
